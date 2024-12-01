@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тапалка Хомяка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #ff6347;
+        }
+        img {
+            width: 150px;
+            height: auto;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 20px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <h1>Тапалка Хомяка 🐹</h1>
+    <p>Нажимай на кнопку, чтобы заработать очки!</p>
+    <img src="https://i.imgur.com/uKcHiDD.png" alt="Хомяк">
+    <br>
+    <button id="tap-button">Тап! 🐾</button>
+    <p id="score">Текущий счёт: 0</p>
+
+    <script>
+        let score = 0;
+        const scoreElement = document.getElementById('score');
+        const tapButton = document.getElementById('tap-button');
+
+        tapButton.addEventListener('click', () => {
+            score++;
+            scoreElement.textContent = `Текущий счёт: ${score}`;
+        });
+    </script>
+</body>
+</html>
